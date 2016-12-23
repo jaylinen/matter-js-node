@@ -20,6 +20,12 @@ Download dependencies
 npm install
 ```
 start the application
+
+```
+gulp
+```
+or
+
 ```
 npm start
 ```
