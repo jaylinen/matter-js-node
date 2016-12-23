@@ -1,0 +1,27 @@
+{
+  "name": "matter-js-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaylinen/matter-js-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaylinen/matter-js-node/issues"
+  },
+  "homepage": "https://github.com/jaylinen/matter-js-node#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "matter-js": "^0.11.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
