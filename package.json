@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +18,13 @@
   },
   "homepage": "https://github.com/jaylinen/matter-js-node#readme",
   "dependencies": {
+    "del": "^2.2.2",
     "express": "^4.14.0",
     "matter-js": "^0.11.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-nodemon": "^2.2.1",
     "run-sequence": "^1.2.2"
   }
