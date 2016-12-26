@@ -1,12 +1,18 @@
 version: '2'
 
 services:
-  app:
+  users:
     build:
       context: .
     ports:
       - "3000:3000"
-      - "5858:5858"
-      - "35729:35729"
+    volumes:
+      - ".:/src/app"
+
+  auth:
+    build:
+      context: .
+    ports:
+      - "4000:3000"
     volumes:
       - ".:/src/app"

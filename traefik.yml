@@ -1,0 +1,43 @@
+version: '2'
+
+services:
+  users:
+    build:
+      context: .
+    volumes:
+      - ".:/src/app"
+    labels:
+      - "traefik.frontend.rule=PathPrefixStrip:/users"
+      - "traefik.port=3000"
+      - "traefik.backend=users"
+
+  users2:
+    build:
+      context: .
+    volumes:
+      - ".:/src/app"
+    labels:
+      - "traefik.frontend.rule=PathPrefixStrip:/users"
+      - "traefik.port=3000"
+      - "traefik.backend=users"
+
+  auth:
+    build:
+      context: .
+    volumes:
+      - ".:/src/app"
+    labels:
+      - "traefik.frontend.rule=PathPrefixStrip:/auth"
+      - "traefik.port=3000"
+      - "traefik.backend=auth"
+
+  gateway:
+    image: traefik:latest
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "./traefik.toml:/etc/traefik/traefik.toml"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    labels:
+      - "traefik.backend=gateway"
